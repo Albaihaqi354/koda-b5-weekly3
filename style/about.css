@@ -1,0 +1,806 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FBFBFB;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+.logo {
+    font-size: 18px;
+    font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+.nav-links {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links li:first-child{
+    text-decoration: underline;
+    text-decoration-color: #1E93AB;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.nav-links a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-radius: 4px;
+    color: #1E93AB;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 30;
+    position: relative;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    display: block;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
+.container-about {
+    position: relative;
+    z-index: 5;
+}
+
+.section-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0 80px;
+    min-height: 500px;
+    gap: 80px;
+}
+
+.container-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.text-work {
+    font-size: 18px;
+    color: #1E93AB;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-name {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0 25px 0;
+    color: #222;
+}
+
+.text-about {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.button-about {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.button-about a {
+    text-decoration: none;
+    background-color: #1E93AB;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #1E93AB;
+    border-radius: 5px;
+    padding: 12px 35px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button-about a:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.container-svg {
+    flex-shrink: 0;
+}
+
+.container-svg svg {
+    display: block;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.container-contact {
+    margin-top: 100px;
+    padding: 60px 0 80px;
+}
+
+.container-contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.container-contact hr {
+    height: 3px;
+    background-color: #1E93AB;
+    width: 8%;
+    margin: 0 auto 50px;
+    border: none;
+}
+
+.container-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 80px;
+    font-family: "Nunito";
+    font-weight: 500;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form label {
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.container-form input,
+.container-form textarea {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: "Nunito";
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.container-form textarea {
+    margin-bottom: 25px;
+    resize: none;
+}
+
+.container-form input:focus,
+.container-form textarea:focus {
+    outline: none;
+    border-color: #1E93AB;
+}
+
+.container-form button {
+    cursor: pointer;
+    padding: 12px 30px;
+    background-color: #1E93AB;
+    border: 2px solid #1E93AB;
+    color: white;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    align-self: flex-end;
+    transition: all 0.3s ease;
+}
+
+.container-form button:hover {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+}
+
+.social-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #1E93AB;
+    transform: translateY(-3px);
+}
+
+.icon-link svg {
+    width: 48px;
+    height: 48px;
+}
+
+.copyright {
+    margin-top: 50px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: -100px;
+}
+
+footer svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        z-index: 30;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        position: relative;
+        z-index: 30;
+    }
+
+    .logo {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background-color: #1E93AB;
+        flex-direction: column;
+        padding-top: 70px;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        display: flex;
+        font-size: 14px;
+        list-style: none;
+        z-index: 25;
+    }
+
+    .nav-hamburger:checked + .hamburger + .nav-links {
+        right: 0;
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 80%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .section-about {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        min-height: auto;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    .container-text {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .container-svg {
+        order: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    .text-name {
+        font-size: 2rem;
+    }
+
+    .text-about {
+        font-size: 14px;
+    }
+
+    .button-about {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container-svg svg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container-contact {
+        margin-top: 50px;
+        padding: 40px 0 50px;
+    }
+
+    .container-contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .container-form {
+        padding: 0 20px;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .icon-link svg {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        z-index: 30;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        display: block;
+    }
+
+    .navbar {
+        padding: 18px 40px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background-color: #1E93AB;
+        flex-direction: column;
+        padding-top: 70px;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        display: flex;
+        font-size: 16px;
+        list-style: none;
+        z-index: 25;
+    }
+
+    .nav-hamburger:checked + .hamburger + .nav-links {
+        right: 0;
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .nav-hamburger:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 80%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .section-about {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .container-text {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .container-svg {
+        order: 1;
+    }
+
+    .text-name {
+        font-size: 2.5rem;
+    }
+
+    .text-about {
+        font-size: 16px;
+    }
+
+    .button-about {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container-svg svg {
+        width: 280px;
+        height: 280px;
+    }
+
+    .container-contact {
+        margin-top: 70px;
+        padding: 50px 0 60px;
+    }
+
+    .container-contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .container-form {
+        padding: 0 40px;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .icon-link svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 20px 60px;
+        max-width: 100%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        font-size: 16px;
+        gap: 2rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .section-about {
+        padding: 0 60px;
+        gap: 60px;
+        min-height: 400px;
+    }
+
+    .container-text {
+        max-width: 500px;
+        order: 1;
+    }
+
+    .container-svg {
+        order: 2;
+    }
+
+    .text-name {
+        font-size: 3rem;
+    }
+
+    .text-about {
+        font-size: 16px;
+    }
+
+    .container-svg svg {
+        width: 320px;
+        height: 320px;
+    }
+
+    .container-contact {
+        margin-top: 80px;
+        padding: 50px 0 70px;
+    }
+
+    .container-contact h2 {
+        font-size: 2.5rem;
+    }
+
+    .container-form {
+        padding: 0 60px;
+    }
+
+    .social-icons {
+        gap: 2rem;
+    }
+
+    .icon-link svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .navbar {
+        max-width: 1200px;
+        padding: 20px 80px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        font-size: 18px;
+        gap: 3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .section-about {
+        max-width: 1200px;
+        padding: 0 80px;
+        gap: 80px;
+        min-height: 500px;
+    }
+
+    .container-text {
+        max-width: 550px;
+        order: 1;
+    }
+
+    .container-svg {
+        order: 2;
+    }
+
+    .text-name {
+        font-size: 3.5rem;
+    }
+
+    .container-svg svg {
+        width: 380px;
+        height: 380px;
+    }
+
+    .container-contact {
+        margin-top: 100px;
+        padding: 60px 0 80px;
+    }
+
+    .container-contact h2 {
+        font-size: 3rem;
+    }
+
+    .container-form {
+        max-width: 650px;
+        padding: 0 80px;
+    }
+
+    .social-icons {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .navbar {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 25px 100px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        font-size: 20px;
+        gap: 4rem;
+    }
+
+    .section-about {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 100px;
+        gap: 100px;
+        min-height: 550px;
+    }
+
+    .container-text {
+        max-width: 600px;
+        order: 1;
+    }
+
+    .container-svg {
+        order: 2;
+    }
+
+    .text-name {
+        font-size: 4rem;
+    }
+
+    .text-about {
+        font-size: 20px;
+    }
+
+    .button-about a {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+
+    .container-svg svg {
+        width: 450px;
+        height: 450px;
+    }
+
+    .container-contact {
+        margin-top: 120px;
+        padding: 80px 0 100px;
+    }
+
+    .container-contact h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .container-contact hr {
+        width: 6%;
+        margin: 0 auto 60px;
+    }
+
+    .container-form {
+        max-width: 750px;
+        padding: 0 100px;
+    }
+
+    .container-form label {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .container-form input,
+    .container-form textarea {
+        padding: 15px 20px;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .container-form button {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+
+    .social-icons {
+        margin-top: 60px;
+        gap: 2.5rem;
+    }
+
+    .icon-link svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+
+    footer {
+        height: 250px;
+        margin-top: -150px;
+    }
+}
